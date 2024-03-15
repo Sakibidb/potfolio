@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Popup with Secret Code</title>
+<title>Popup with Specific Code</title>
 
 <style>
-/* Popup styles */
 .popup {
   display: none;
   position: fixed;
@@ -19,28 +18,25 @@
   border-radius: 5px;
   z-index: 9999;
 }
+
 </style>
 </head>
 <body>
 
-<!-- Button to open the popup -->
-<button onclick="openPopup()">Open Popup</button>
+<button onclick="openPopup()">Open Popup and write a specific word to go main site</button>
 
-<!-- The popup -->
 <div id="popup" class="popup">
-  <h2>Enter Secret Code</h2>
-  <input type="text" id="secretCodeInput">
+  <h3>Write 'sakib' To Go Next Step</h3>
+  <input type="text" id="secretCodeInput" placeholder="Write 'sakib' For Next Step">
   <button onclick="checkSecretCode()">Submit</button>
 </div>
 
 <script>
-// Function to open the popup
 function openPopup() {
   var popup = document.getElementById("popup");
   popup.style.display = "block";
 }
 
-// Function to check the secret code
 function checkSecretCode() {
   var secretCodeInput = document.getElementById("secretCodeInput").value;
   var secretCode = "sakib"; 
